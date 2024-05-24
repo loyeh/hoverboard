@@ -42,7 +42,7 @@ function end() {
 boxes.forEach((box) => {
   box.addEventListener("mouseenter", start);
   box.addEventListener("mouseleave", end);
-  box.addEventListener("touchstart", end);
+  box.addEventListener("touchstart", start);
   box.addEventListener("touchend", end);
   box.addEventListener("touchmove", () => {
     box.style.transition = "0s";
