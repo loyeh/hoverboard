@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100dvw;
+  height: 100dvh;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+}
+
+.row {
+  margin-block: 0;
+}
+.row .box {
+  display: inline-block;
+  margin-inline: 0.25vmin;
+}
+
+.box {
+  width: 2vmin;
+  height: 2vmin;
+  background-color: #666;
+  transition: 0.5s;
+}
+
+.red {
+  background-color: red;
+  transition: 1s;
+}
+
+.orange {
+  background-color: orange;
+  transition: 1s;
+}
+
+.yellow {
+  background-color: yellow;
+  transition: 1s;
+}
+
+.green {
+  background-color: green;
+  transition: 1s;
+}
+
+.skyblue {
+  background-color: skyblue;
+  transition: 1s;
+}
+
+.blue {
+  background-color: blue;
+  transition: 1s;
+}
+
+.purple {
+  background-color: purple;
+  transition: 1s;
+}
