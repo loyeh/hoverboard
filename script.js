@@ -25,20 +25,23 @@ const boxes = document.querySelectorAll(".box");
 
 console.log(boxes);
 
-boxes.forEach((box) => {
-  box.addEventListener("mouseenter", () => {
-    box.style.transition = "0s";
-    let index = Math.floor(Math.random() * colors.length);
-    console.log(index);
-    box.classList.add(colors[index]);
-  });
-});
+function start() {
+  this.style.transition = "0s";
+  let index = Math.floor(Math.random() * colors.length);
+  console.log(index);
+  this.classList.add(colors[index]);
+}
+
+function end() {
+  setTimeout(() => {
+    this.className = "box";
+    this.style.transition = "1s";
+  }, 1000);
+}
 
 boxes.forEach((box) => {
-  box.addEventListener("mouseleave", () => {
-    setTimeout(() => {
-      box.className = "box";
-      box.style.transition = "1s";
-    }, 1000);
-  });
+  box.addEventListener("mouseenter", start);
+  box.addEventListener("mouseleave", end);
+  box.addEventListener("touchstart", end);
+  box.addEventListener("touchend", end);
 });
