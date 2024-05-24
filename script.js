@@ -44,4 +44,14 @@ boxes.forEach((box) => {
   box.addEventListener("mouseleave", end);
   box.addEventListener("touchstart", end);
   box.addEventListener("touchend", end);
+  box.addEventListener("touchmove", () => {
+    box.style.transition = "0s";
+    let index = Math.floor(Math.random() * colors.length);
+    console.log(index);
+    box.classList.add(colors[index]);
+    setTimeout(() => {
+      box.className = "box";
+      box.style.transition = "1s";
+    }, 1000);
+  });
 });
